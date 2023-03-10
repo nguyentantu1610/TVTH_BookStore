@@ -41,7 +41,7 @@ const ProductCard = () => {
                 </div>
             </Link>
         </div>
-    );
+    );                  
 };
 
 export default ProductCard

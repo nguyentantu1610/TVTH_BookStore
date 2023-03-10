@@ -94,7 +94,7 @@ const Header = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="menu-bottom d-flex align-items-center gap-30">
-                            <div><div class="dropdown">
+                            <div><div className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
                                     type="button"
                                     id="dropdownMenuButton1"
@@ -114,7 +114,7 @@ const Header = () => {
                             <div className="menu-links">
                                 <div className="d-flex algin-items-center gap-15">
                                     <NavLink to="/">Trang chủ</NavLink>
-                                    <NavLink to="/">Cửa hàng</NavLink>
+                                    <NavLink to="/store">Cửa hàng</NavLink>
                                     <NavLink to="/">Diễn đàn</NavLink>
                                     <NavLink to="/contact">Liên lạc</NavLink>
                                 </div>
