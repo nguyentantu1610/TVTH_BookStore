@@ -1,6 +1,10 @@
 import React from "react"
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import wishlist from '../images/wishlist.svg';
+import user from '../images/user.svg';
+import cart from '../images/cart.svg';
+import menu from '../images/menu.svg';
 
 const Header = () => {
     return <>
@@ -48,7 +52,7 @@ const Header = () => {
                         <div className="header-upper-links d-flex align-items-center justify-content-between">
                             <div>
                                 <Link to='/wishlist' className="d-flex algin-items-center gap-10 text-white">
-                                    <img src="images/wishlist.svg" alt="wishlist" />
+                                    <img src={wishlist} alt="wishlist" />
                                     <p className="mb-0">
                                         Danh sách <br /> Yêu thích
                                     </p>
@@ -57,7 +61,7 @@ const Header = () => {
 
                             <div>
                                 <Link to='/login' className="d-flex algin-items-center gap-10 text-white">
-                                    <img src="images/user.svg" alt="user" />
+                                    <img src={user} alt="user" />
                                     <p className="mb-0">
                                         Đăng Nhập</p>
                                 </Link>
@@ -65,7 +69,7 @@ const Header = () => {
 
                             <div>
                                 <Link to='/cart' className="d-flex algin-items-center gap-10 text-white">
-                                    <img src="images/cart.svg" alt="cart" />
+                                    <img src={cart} alt="cart" />
                                     <div className="d-flex flex-column gap-10">
                                         <span className="badge bg-white text-dark">0</span>
                                         <p className="mb-0">
@@ -91,7 +95,7 @@ const Header = () => {
                                     data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     
-                                    <img src="images/menu.svg" alt="" />
+                                    <img src={menu} alt="" />
                                     <span className="me-5 d-inline-block">Danh mục cửa hàng</span>
                                 
                                 </button>
@@ -104,7 +108,7 @@ const Header = () => {
                             <div className="menu-links">
                                 <div className="d-flex algin-items-center gap-15">
                                     <NavLink to="/">Trang chủ</NavLink>
-                                    <NavLink to="/store">Cửa hàng</NavLink>
+                                    <NavLink to="/product">Cửa hàng</NavLink>
                                     <NavLink to="/blogs">Tin tức</NavLink>
                                     <NavLink to="/contact">Liên hệ</NavLink>
                                 </div>

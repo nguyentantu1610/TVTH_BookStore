@@ -14,7 +14,7 @@ const BlogCard = () => {
                             Một buổi sáng CN tuyệt vời
                         </h5>
                         <p className="desc">Hôm nay chủ nhật nắng ấm, gió thoáng và không mưa</p>
-                        <Link to="/" className="button ">Đọc thêm</Link>
+                        <Link to="/blog/:id" className="button ">Đọc thêm</Link>
                     
                 </div>
             </div>
