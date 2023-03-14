@@ -18,9 +18,9 @@ const ProductCard = (props) => {
             <div className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-3"}  `} >
                 <Link to=":id" className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
-                        <Link>
+                        <button className="border-0 bg-transparent">
                             <img src={wish} alt="wishlist" />
-                        </Link>
+                        </button>
                     </div>
                     <div className="product-image">
                         <img src={DoremonCD} className="img-fluid" alt="product image" />
@@ -48,12 +48,12 @@ const ProductCard = (props) => {
                     </div>
                     <div className="action-bar position-absolute">
                         <div className="d-flex flex-column">
-                            <Link>
+                            <button className="border-0 bg-transparent">
                                 <img src={view} alt="addcart" />
-                            </Link>
-                            <Link>
+                            </button>
+                            <button className="border-0 bg-transparent">
                                 <img src={addcard} alt="addcart" />
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </Link>
@@ -62,9 +62,9 @@ const ProductCard = (props) => {
             <div className={` ${location.pathname == "/store" ? `gr-${grid}` : "col-3"}  `} >
                 <Link className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
-                        <Link>
+                        <button className="border-0 bg-transparent">
                             <img src={wish} alt="wishlist" />
-                        </Link>
+                        </button>
                     </div>
                     <div className="product-image">
                         <img src={DoremonCD} className="img-fluid" alt="product image" />
@@ -92,12 +92,12 @@ const ProductCard = (props) => {
                     </div>
                     <div className="action-bar position-absolute">
                         <div className="d-flex flex-column">
-                            <Link>
+                            <button className="border-0 bg-transparent">
                                 <img src={view} alt="addcart" />
-                            </Link>
-                            <Link>
+                            </button>
+                            <button className="border-0 bg-transparent">
                                 <img src={addcard} alt="addcart" />
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </Link>

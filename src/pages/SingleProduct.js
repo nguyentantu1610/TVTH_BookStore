@@ -6,6 +6,7 @@ import ReactImageZoom from 'react-image-zoom';
 import ReactStars from 'react-rating-stars-component';
 import { Link } from 'react-router-dom';
 import { AiOutlineHeart } from 'react-icons/ai';
+import Container from '../components/Container';
 
 
 const SingleProduct = () => {
@@ -19,87 +20,84 @@ const SingleProduct = () => {
         <>
             <Meta title={"Tên sách"} />
             <BreadCrumb title='Tên sách' />
-            <div className="main-product-wrapper py-5 home-wrapper-2">
-                <div className="container-xxl">
-                    <div className="row">
-                        <div className="col-6">
-                            <div className="main-product-image">
-                                <div>
-                                    <ReactImageZoom {...props} />
-                                </div>
+            <Container class1="main-product-wrapper py-5 home-wrapper-2">
+                <div className="row">
+                    <div className="col-6">
+                        <div className="main-product-image">
+                            <div>
+                                <ReactImageZoom {...props} />
                             </div>
                         </div>
-                        <div className="col-6">
-                            <div className="main-product-details">
-                                <div className="border-bottom">
-                                    <h3 className="title">Tuyển tập Doraemon chuyên đề</h3>
+                    </div>
+                    <div className="col-6">
+                        <div className="main-product-details">
+                            <div className="border-bottom">
+                                <h3 className="title">Tuyển tập Doraemon chuyên đề</h3>
+                            </div>
+                            <div className="border-bottom py-3">
+                                <p className="price">100.000 VNĐ</p>
+                                <div className="d-flex align-items-center gap-10">
+                                    <ReactStars
+                                        count={5}
+                                        size={24}
+                                        value={4}
+                                        edit={false}
+                                        activeColor="#ffd700"
+                                    />
                                 </div>
-                                <div className="border-bottom py-3">
-                                    <p className="price">100.000 VNĐ</p>
-                                    <div className="d-flex align-items-center gap-10">
-                                        <ReactStars
-                                            count={5}
-                                            size={24}
-                                            value={4}
-                                            edit={false}
-                                            activeColor="#ffd700"
-                                        />
-                                    </div>
-                                </div>
+                            </div>
 
-                                <div className="py-3">
-                                    <div className="d-flex gap-10 align-items-center my-2">
-                                        <h3 className="product-heading">Định dạng : Bìa mềm</h3>
-                                        <p className="product-data">ABC</p>
+                            <div className="py-3">
+                                <div className="d-flex gap-10 align-items-center my-2">
+                                    <h3 className="product-heading">Định dạng : Bìa mềm</h3>
+                                    <p className="product-data">ABC</p>
+                                </div>
+                                <div className="d-flex gap-10 align-items-center my-2">
+                                    <h3 className="product-heading">Tác giả:</h3>
+                                    <p className="product-data">ABC</p>
+                                </div>
+                                <div className="d-flex gap-10 align-items-center my-2">
+                                    <h3 className="product-heading">Thể loại :</h3>
+                                    <p className="product-data">ABC</p>
+                                </div>
+                                <div className="d-flex gap-10 align-items-center my-2">
+                                    <h3 className="product-heading">Nhà xuất bản :</h3>
+                                    <p className="product-data">ABC</p>
+                                </div>
+                                <div className="d-flex gap-10 align-items-center my-2">
+                                    <h3 className="product-heading">Tình trạng :</h3>
+                                    <p className="product-data">Còn hàng</p>
+                                </div>
+                                <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
+                                    <h3 className="product-heading">Số lượng :</h3>
+                                    <div className="">
+                                        <input type="number"
+                                            name=""
+                                            min={1}
+                                            max={10}
+                                            className="form-control"
+                                            style={{ width: "70px" }}
+                                            id="" />
                                     </div>
-                                    <div className="d-flex gap-10 align-items-center my-2">
-                                        <h3 className="product-heading">Tác giả:</h3>
-                                        <p className="product-data">ABC</p>
+                                    <div className="d-flex align-items-center gap-30 ms-5">
+                                        <button className="button border-0" type="submit">Thêm vào giỏ hàng</button>
+                                        <button className="button signup">Mua ngay</button>
                                     </div>
-                                    <div className="d-flex gap-10 align-items-center my-2">
-                                        <h3 className="product-heading">Thể loại :</h3>
-                                        <p className="product-data">ABC</p>
-                                    </div>
-                                    <div className="d-flex gap-10 align-items-center my-2">
-                                        <h3 className="product-heading">Nhà xuất bản :</h3>
-                                        <p className="product-data">ABC</p>
-                                    </div>
-                                    <div className="d-flex gap-10 align-items-center my-2">
-                                        <h3 className="product-heading">Tình trạng :</h3>
-                                        <p className="product-data">Còn hàng</p>
-                                    </div>
-                                    <div className="d-flex align-items-center gap-15 flex-row mt-2 mb-3">
-                                        <h3 className="product-heading">Số lượng :</h3>
-                                        <div className="">
-                                            <input type="number"
-                                                name=""
-                                                min={1}
-                                                max={10}
-                                                className="form-control"
-                                                style={{ width: "70px" }}
-                                                id="" />
-                                        </div>
-                                        <div className="d-flex align-items-center gap-30 ms-5">
-                                            <button className="button border-0" type="submit">Thêm vào giỏ hàng</button>
-                                            <button className="button signup">Mua ngay</button>
-                                        </div>
-                                    </div>
-                                    <div className="d-flex align-items-center gap-15">
-                                        <div>
-                                            <a href="">
-                                                <AiOutlineHeart className="fs-5 my-2" /> Thêm vào danh sách yêu thích
-                                            </a>
-                                        </div>
+                                </div>
+                                <div className="d-flex align-items-center gap-15">
+                                    <div>
+                                        <a href="">
+                                            <AiOutlineHeart className="fs-5 my-2" /> Thêm vào danh sách yêu thích
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Container>
 
-            <div className="description-wrapper py-5 home-wrapper-2">
-                <div className="container-xxl">
+            <Container class1="description-wrapper py-5 home-wrapper-2">
                     <div className="row">
                         <div className="col-12">
                             <h4>Mô tả</h4>
@@ -113,11 +111,9 @@ const SingleProduct = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            </Container>
 
-            <section className="popular-wrapper py-5 home-wrapper-2">
-                <div className="container-xxl">
+            <Container class1="popular-wrapper py-5 home-wrapper-2">
                     <div className="row">
                         <div className="col-12">
                             <h3 className="section-heading">Mặt hàng bán chạy</h3>
@@ -126,8 +122,7 @@ const SingleProduct = () => {
                     <div className="row">
                         <ProductCard />
                     </div>
-                </div>
-            </section>
+            </Container>
         </>
     );
 };
