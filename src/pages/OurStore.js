@@ -55,13 +55,13 @@ const OurStore = () => {
                                         <input type="email" className="form-control"
                                             id="floatingInput"
                                             placeholder="Từ" />
-                                        <label for="floatingInput">Từ</label>
+                                        <label htmlFor="floatingInput">Từ</label>
                                     </div>
                                     <div className="form-floating mb-3">
                                         <input type="email" className="form-control"
                                             id="floatingInput1"
                                             placeholder="Đến" />
-                                        <label for="floatingInput">Đến</label>
+                                        <label htmlFor="floatingInput">Đến</label>
                                     </div>
                                 </div>
                             </div>
@@ -133,9 +133,14 @@ const OurStore = () => {
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="d-flex align-items-center gap-10">
                                     <p className="mb-0 d-block" style={{ width: "100px" }} >Sắp xếp:</p>
-                                    <select name="" className="form-control form-select" id="" >
+                                    <select
+                                        name=""
+                                        defaultValue={"manula"}
+                                        className="form-control form-select"
+                                        id="" >
+
                                         <option value="manual">Nổi bật</option>
-                                        <option value="best-selling" selected="selected">Mua nhiều nhất</option>
+                                        <option value="best-selling">Mua nhiều nhất</option>
                                         <option value="title-asc">A-Z</option>
                                         <option value="title-decs">Z-A</option>
                                     </select>
