@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactStars from 'react-rating-stars-component';
 import { Link, useLocation } from 'react-router-dom';
 import wish from '../images/wish.svg';
@@ -7,13 +7,35 @@ import DoremonCD from '../images/DoremonCD.jpg';
 import DoremonCD2 from '../images/DoremonCD1.png';
 import addcard from '../images/add-cart.svg';
 import view from '../images/view.svg';
+import axios from 'axios';
+import { GlobalState } from '../GlobalState';
 
 
 const ProductCard = (props) => {
+
+    const state = useState(GlobalState)
+
+    console.log(state)
+
     const { grid } = props;
     let location = useLocation();
 
+    const [products, setProducts] = useState([])
+
+    const getProducts = async () => {
+        const res = await axios.get('/api/products')
+        console.log(res.data.products)
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
+
+
     return (
+        
+        {products: [products, setProducts] },
+
         <>
             <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}  `} >
                 <Link

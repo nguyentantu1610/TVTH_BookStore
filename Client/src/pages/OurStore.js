@@ -1,14 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import BreadCrumb from '../components/BreadCrumb';
 import Meta from '../components/Meta';
 import ReactStars from 'react-rating-stars-component';
 import ProductCard from '../components/ProductCard';
 import Container from '../components/Container';
+import axios from 'axios';
+import { GlobalState } from '../GlobalState';
 
 const OurStore = () => {
+
+    const state = useState(GlobalState)
+
+    console.log(state)
+
+    const [products, setProducts] = useState([])
+
+    const getProducts = async () => {
+        const res = await axios.get('/api/products')
+        console.log(res.data.products)
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
+
     const [grid, setGrid] = useState(4);
 
     return (
+        {products: [products, setProducts] },
         <>
             <Meta title={"Cửa hàng"} />
             <BreadCrumb title='Cửa hàng' />
@@ -21,10 +40,7 @@ const OurStore = () => {
                             </h3>
                             <div>
                                 <ul className="ps-0">
-                                    <li>LightNovel</li>
-                                    <li>Truyện tranh</li>
-                                    <li>Truyện nước ngoài</li>
-                                    <li>Truyện thiếu nhi</li>
+
                                 </ul>
                             </div>
                         </div>
