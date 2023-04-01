@@ -5,7 +5,7 @@ do trong file package.json tao thuoc tinh module => import <npmjs> from <npmjs>
 Shift + Ctrl + i => pick emojisense
 
 //backend
-npm i colors dotenv express nodemon bcrypt jsonwebtoken 
+npm i colors dotenv express nodemon bcrypt jsonwebtoken slugify express-formidable
 npm i mongoose morgan
 npm i concurrently cors
 
