@@ -11,4 +11,4 @@ npm i concurrently cors
 
 //frontend
 cd ./client/
-npm i react-router-dom react-helmet react-icons react-toastify axios react-hot-toast
+npm i react-router-dom react-helmet react-icons react-toastify axios react-hot-toast antd
