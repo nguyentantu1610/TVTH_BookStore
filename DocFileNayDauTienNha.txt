@@ -5,10 +5,10 @@ do trong file package.json tao thuoc tinh module => import <npmjs> from <npmjs>
 Shift + Ctrl + i => pick emojisense
 
 //backend
-npm i colors dotenv express nodemon bcrypt jsonwebtoken slugify express-formidable
+npm i colors dotenv express nodemon bcrypt jsonwebtoken slugify express-formidable braintree
 npm i mongoose morgan
 npm i concurrently cors
 
 //frontend
 cd ./client/
-npm i react-router-dom react-helmet react-icons react-toastify axios react-hot-toast antd
+npm i react-router-dom react-helmet react-icons react-toastify axios react-hot-toast antd braintree-web-drop-in-react moment
