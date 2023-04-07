@@ -36,6 +36,10 @@ body {
   box-sizing: border-box;
   box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar__container {
@@ -49,6 +53,10 @@ body {
 }
 .navbar__left-logo img {
   width: 110px;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar__right {
