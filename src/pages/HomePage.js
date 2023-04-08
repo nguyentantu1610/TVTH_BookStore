@@ -166,7 +166,9 @@ const HomePage = () => {
                 />
                 <div className="card-body">
                   <div className="card-name-price">
-                    <h5 className="card-tittle">{p.name}</h5>
+                    <h5 className="card-tittle">
+                      {p.name.substring(0, 10)}...
+                    </h5>
                     <h5 className="card-title card-price">
                       {p.price.toLocaleString("vi-VN", {
                         style: "currency",
@@ -176,7 +178,7 @@ const HomePage = () => {
                   </div>
 
                   <p className="card-text">
-                    {p.description.substring(0, 60)}...
+                    {p.description.substring(0, 20)}...
                   </p>
                   <div className="card-name-price">
                     <button
@@ -217,7 +219,7 @@ const HomePage = () => {
                 ) : (
                   <>
                     {" "}
-                    Loadmore <AiOutlineReload />
+                    Tải thêm <AiOutlineReload />
                   </>
                 )}
               </button>

@@ -20,6 +20,7 @@ const CreateCategory = () => {
       const { data } = await axios.post("/api/v1/category/create-category", {
         name,
       });
+
       if (data?.success) {
         toast.success(`${name} đã được thêm`);
         getAllCategory();
@@ -28,7 +29,7 @@ const CreateCategory = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error("Lỗi trong Form thêm thể loại");
+      toast.error("Vui lòng nhập tên thể loại sản phẩm");
     }
   };
 
@@ -75,7 +76,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `/api/v1/category/delete-category/${pId}`,
+        `/api/v1/category/delete-category/${pId}`
       );
       if (data.success) {
         toast.success(`Đã xóa thể loại`);

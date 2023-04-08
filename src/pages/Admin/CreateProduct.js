@@ -53,9 +53,11 @@ const CreateProduct = () => {
         "/api/v1/product/create-product",
         productData
       );
-      if (data?.success) {
-        toast.error(data?.message);
-      } else {
+
+      if(name == "" || description == "" || price == "" || quantity == "" || category == ""){
+        toast.error("Vui lòng nhập đầy đủ thông tin sản phẩm");
+      }
+      else {
         toast.success("Thêm sản phẩm thành công");
         navigate("/dashboard/admin/products");
       }

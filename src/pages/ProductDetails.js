@@ -42,7 +42,10 @@ const ProductDetails = () => {
 
   return (
     <Layout>
-      <div className="row container product-details">
+      <div
+        className="row container product-details"
+        style={{ marginLeft: "200px" }}
+      >
         <div className="col-md-6">
           <img
             src={`/api/v1/product/product-photo/${product._id}`}
@@ -84,7 +87,7 @@ const ProductDetails = () => {
               />
               <div className="card-body">
                 <div className="card-name-price">
-                  <h5 className="card-tittle">{p.name}</h5>
+                  <h5 className="card-tittle">{p.name.substring(0, 10)}...</h5>
                   <p className="card-title card-price">
                     {p.price.toLocaleString("vi-VN", {
                       style: "currency",
@@ -92,13 +95,13 @@ const ProductDetails = () => {
                     })}
                   </p>
                 </div>
-                <p className="card-text">{p.description.substring(0, 30)}...</p>
+                <p className="card-text">{p.description.substring(0, 20)}...</p>
                 <div className="card-name-price">
                   <button
                     className="btn btn-info ms-1"
                     onClick={() => navigate(`/product/${p.slug}`)}
                   >
-                    More Details
+                    Chi tiết
                   </button>
                 </div>
               </div>

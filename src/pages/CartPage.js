@@ -86,7 +86,7 @@ const CartPage = () => {
             <h1 className="text-center bg-light p-2 mb-1">
               {`Chào ${auth?.token && auth?.user?.name}`}
             </h1>
-            <h4 className="text-center">
+            <h4 className="text-center" style={{marginBottom:"40px",marginTop:"50px"}}>
               {cart?.length
                 ? `Bạn đang có ${cart.length} sản phẩm trong giỏ hàng ${
                     auth?.token ? "" : "Vui lòng đăng nhập để thanh toán"
@@ -126,7 +126,7 @@ const CartPage = () => {
                 </div>
               ))}
             </div>
-            <div className="col-md-5 cart-sumary" style={{paddingLeft:"100px"}}>
+            <div className="col-md-5 cart-sumary" style={{paddingLeft:"300px"}}>
               <h2 className="text-center">ĐƠN HÀNG</h2>
               <p className="text-center">Chi tiết đơn hàng</p>
               <hr />

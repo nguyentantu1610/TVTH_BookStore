@@ -78,9 +78,10 @@ const UpdateProduct = () => {
         `/api/v1/product/update-product/${id}`,
         productData
       );
-      if (data?.success) {
-        toast.error(data?.message);
-      } else {
+      if(name == "" || description == "" || price == "" || quantity == "" || category == "") {
+        toast.error("Không được để trống thông tin sản phẩm");
+      }
+        else {
         toast.success("Cập nhập sản phẩm thành công");
         navigate("/dashboard/admin/products");
       }

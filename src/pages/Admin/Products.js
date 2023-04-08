@@ -5,6 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
+
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -46,8 +47,8 @@ const Products = () => {
                     alt={p.name}
                   />
                   <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">{p.description}</p>
+                    <h5 className="card-title">{p.name.substring(0,13)}...</h5>
+                    <p className="card-text">{p.description.substring(0,30)}...</p>
                   </div>
                 </div>
               </Link>

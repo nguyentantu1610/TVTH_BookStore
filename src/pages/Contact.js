@@ -22,7 +22,7 @@ const Contact = () => {
           </p>
 
           <p className="mt-3">
-            <BiMailSend /> : www.duongminhhao23@gmail.com
+            <BiMailSend /> :duongminhhao23@gmail.com
           </p>
 
           <p className="mt-3">
