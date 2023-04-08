@@ -23,7 +23,7 @@ export const createProductController = async (req, res) => {
       req.fields;
     const { photo } = req.files;
 
-    //alidation
+    //Validation
     switch (true) {
       case !name:
         return res.status(500).send({ error: "Vui lòng điền Tên sản phẩm" });
@@ -144,7 +144,7 @@ export const deleteProductController = async (req, res) => {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "Error while deleting product",
+      message: "Lỗi trong khi xóa ảnh sản phẩm",
       error,
     });
   }
@@ -159,19 +159,19 @@ export const updateProductController = async (req, res) => {
     //alidation
     switch (true) {
       case !name:
-        return res.status(500).send({ error: "Name is Required" });
+        return res.status(500).send({ error: "Vui lòng nhập tên sản phẩm" });
       case !description:
-        return res.status(500).send({ error: "Description is Required" });
+        return res.status(500).send({ error: "Vui lòng nhập mô tả sản phẩm" });
       case !price:
-        return res.status(500).send({ error: "Price is Required" });
+        return res.status(500).send({ error: "Vui lòng nhập giá sản phẩm" });
       case !category:
-        return res.status(500).send({ error: "Category is Required" });
+        return res.status(500).send({ error: "Vui lòng nhập thể loại sản phẩm" });
       case !quantity:
-        return res.status(500).send({ error: "Quantity is Required" });
+        return res.status(500).send({ error: "Vui lòng nhập số lượng sản phẩm" });
       case photo && photo.size > 1000000:
         return res
           .status(500)
-          .send({ error: "photo is Required and should be less then 1mb" });
+          .send({ error: "Dung lượng ảnh phải nhỏ hơn 1Mb" });
     }
 
     const products = await productModel.findByIdAndUpdate(
@@ -186,7 +186,7 @@ export const updateProductController = async (req, res) => {
     await products.save();
     res.status(201).send({
       success: true,
-      message: "Product Updated Successfully",
+      message: "Cập nhập sản phẩm thành công",
       products,
     });
   } catch (error) {
@@ -194,7 +194,7 @@ export const updateProductController = async (req, res) => {
     res.status(500).send({
       success: false,
       error,
-      message: "Error in Updte product",
+      message: "Lỗi trong khi cập nhập sản phẩm",
     });
   }
 };
